@@ -1,0 +1,20 @@
+server:
+    port: 1700
+spring:
+   rabbitmq:
+        host: 10.0.0.222
+        port: 5672
+        username: zhangwei@2018
+        password: zhangwei@2018
+        virtual-host: /logging
+   cloud:
+      stream:
+        bindings:
+          CONSUMER_CHANNEL:
+              destination: vane_mq
+              contentType: application/json
+              group: vane_mq_group
+debug: true
+
+
+
